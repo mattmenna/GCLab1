@@ -29,28 +29,33 @@ public class Main {
         float vOutput;
 
         char cont;
+
 // Program Loop as long as cont is not 'n'
         do {
             System.out.print("Enter Length: ");
             length = scnr.nextFloat();
             System.out.print("Enter Width: ");
             width = scnr.nextFloat();
-            System.out.print("Enter Height: ");
-            height = scnr.nextFloat();
 
             aOutput = area(length, width);
             pOutput = perimeter(length, width);
-            vOutput = volume(length, width, height);
 
             System.out.println("Area is " + aOutput);
             System.out.println("Perimeter is " + pOutput);
-            System.out.println("Volume is " + vOutput + "\n");
+
+            System.out.println("Do you want to calculate volume? (y/n)");
+            if (scnr.next() != "n") {
+                System.out.print("Enter Height: ");
+                height = scnr.nextFloat();
+                vOutput = volume(length, width, height);
+                System.out.println("Volume is " + vOutput + "\n");
+            }
 
             System.out.println("Do you want to continue? Please use y or n");
             cont = scnr.next().charAt(0);
 
-            } while(cont != 'n');
-        }
+        } while (cont != 'n');
+    }
 
     private static float area(float length, float width) {
         float area = length * width;
@@ -63,7 +68,7 @@ public class Main {
     }
 
     private static float volume(float length, float width, float height) {
-        float volume=0;
+        float volume = 0;
         return volume;
     }
 }
