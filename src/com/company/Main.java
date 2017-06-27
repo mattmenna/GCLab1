@@ -18,6 +18,8 @@ public class Main {
         Scanner scnr = new Scanner(System.in);
         System.out.println("Welcome to Grand Circus' Room Detail Generator!");
         System.out.println();
+
+        // Variables
         float length;
         float width;
         float height;
@@ -27,7 +29,7 @@ public class Main {
         float vOutput;
 
         char cont;
-
+// Program Loop as long as cont is not 'n'
         do {
             System.out.print("Enter Length: ");
             length = scnr.nextFloat();
