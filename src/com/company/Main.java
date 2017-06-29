@@ -68,7 +68,7 @@ public class Main {
     }
 
     private static float volume(float length, float width, float height) {
-        float volume = 0;
+        float volume = length * width * height;
         return volume;
     }
 }
